@@ -26,5 +26,7 @@ class Main {
         System.out.println("");
         System.out.println(methods.isArrayIncrease(newArray2) == true? "массив со строго возрастающей последовательностью":
                 "расходимся ребятки, обычный массив:(");
+        System.out.println("");
+        methods.test();
     }
 }

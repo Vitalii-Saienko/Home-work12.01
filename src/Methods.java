@@ -40,11 +40,32 @@ class Methods {
     public boolean isArrayIncrease(int[]array){
         boolean flag = true;
         for (int i = 0; i < array.length; i++) {
-            if (array[i]>array[i+1]){
-                flag = false;
+            if (i+1>=array.length){
                 break;
+            }
+            if (array[i]>array[i+1]){
+                    flag = false;
+                    break;
             }
         }
         return flag;
+    }
+
+    public void test(){
+        int[] testArray1 = {0,2,3,4,5};
+        if (isArrayIncrease(testArray1)==true){
+            System.out.println("Test1 succeed");
+        }
+        else {
+            System.out.println("Test1 finished with error");
+        }
+        int[] testArray2 = {0,2,3,4,2};
+        if (isArrayIncrease(testArray2)==true){
+            System.out.println("Test2 finished with error");
+        }
+        else {
+            System.out.println("Test2 succeed");
+        }
+
     }
 }
